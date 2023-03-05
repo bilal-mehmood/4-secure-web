@@ -7,9 +7,9 @@
     if (anchor.length) {
       anchor.children("a").bind("click", function (event) {
         if ($(window).scrollTop() > 10) {
-          var headerH = "100";
+          var headerH = "70";
         } else {
-          var headerH = "100";
+          var headerH = "70";
         }
         var target = $(this);
         $("html, body")
