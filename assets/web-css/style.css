@@ -1900,7 +1900,7 @@ img {
 .get-quote-two {
   position: relative;
   padding: 120px 0px 210px;
-  background-color: var(--thm-black);
+  background-color: #f1f1f1;
   background-image: url(../images/background/contact-bg-1-1.png);
   background-size: cover;
   color: #999b9f;
@@ -1917,7 +1917,7 @@ img {
   margin-bottom: 35px;
 }
 .get-quote-two .sec-title h2 {
-  color: #ffffff;
+  color: #000;
 }
 .get-quote-two .left-col {
   position: relative;
@@ -1926,13 +1926,13 @@ img {
 .get-quote-two .left-col .inner {
   position: relative;
   display: block;
-  max-width: 480px;
+/*   max-width: 480px; */
 }
 .get-quote-two .left-col .text {
   position: relative;
   display: block;
   color: #999b9f;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 .get-quote-two .info {
   position: relative;
@@ -1943,20 +1943,20 @@ img {
 .get-quote-two .form-box form .form-group textarea,
 .get-quote-two .form-group .ui-selectmenu-button.ui-button {
   background-color: #ffffff;
-  border-color: #ffffff;
+  border-color: #959595;
 }
 .get-quote-two .info ul li {
   position: relative;
   display: block;
   min-height: 60px;
-  padding-left: 85px;
+  padding-left: 60px;
   line-height: 28px;
   padding-top: 5px;
   margin-bottom: 20px;
 }
 .get-quote-two .info ul li strong {
   display: block;
-  color: #ffffff;
+  color: #000;
   letter-spacing: 0.1em;
   font-size: 16px;
   font-weight: 400;
@@ -1969,14 +1969,18 @@ img {
   left: 0;
   top: 0;
   line-height: 30px;
-  padding: 15px 10px;
-  width: 60px;
-  height: 60px;
+  padding: 0;
+  width: 45px;
+  height: 45px;
   text-align: center;
   background-color: var(--thm-base);
   border-radius: 50%;
   font-size: 16px;
   color: #fff;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .get-quote-two .info ul li:last-child {
   margin: 0;
@@ -1992,7 +1996,7 @@ img {
   -o-transition: all 0.3s ease;
 }
 .get-quote-two .info ul li a:hover {
-  color: #ffffff;
+  color: #306cb5;
   text-decoration: underline;
   -webkit-text-decoration-color: var(--thm-base);
   text-decoration-color: var(--thm-base);

@@ -2,65 +2,65 @@
   "use strict";
 
   // update 18-05-2022
-  function SmoothMenuScroll2() {
-    var anchor = $(".scrollToLink");
-    if (anchor.length) {
-      anchor.children("a").bind("click", function (event) {
-        if ($(window).scrollTop() > 10) {
-          var headerH = "70";
-        } else {
-          var headerH = "70";
-        }
-        var target = $(this);
-        $("html, body")
-          .stop()
-          .animate(
-            {
-              scrollTop: $(target.attr("href")).offset().top - headerH + "px"
-            },
-            1200,
-            "easeInOutExpo"
-          );
-        anchor.removeClass("current");
-        target.parent().addClass("current");
-        event.preventDefault();
-      });
-    }
-  }
-  SmoothMenuScroll2();
+  // function SmoothMenuScroll2() {
+  //   var anchor = $(".scrollToLink");
+  //   if (anchor.length) {
+  //     anchor.children("a").bind("click", function (event) {
+  //       if ($(window).scrollTop() > 10) {
+  //         var headerH = "70";
+  //       } else {
+  //         var headerH = "70";
+  //       }
+  //       var target = $(this);
+  //       $("html, body")
+  //         .stop()
+  //         .animate(
+  //           {
+  //             scrollTop: $(target.attr("href")).offset().top - headerH + "px"
+  //           },
+  //           1200,
+  //           "easeInOutExpo"
+  //         );
+  //       anchor.removeClass("current");
+  //       target.parent().addClass("current");
+  //       event.preventDefault();
+  //     });
+  //   }
+  // }
+  // SmoothMenuScroll2();
 
-  function OnePageMenuScrollTwo() {
-    var windowScroll = $(window).scrollTop();
-    var menuWrapper = $(".one-page-scroll-menu");
-    if (windowScroll >= 100) {
-      menuWrapper
-        .find(".scrollToLink")
-        .find("a")
-        .each(function () {
-          // grabing section id dynamically
-          var sections = $(this).attr("href");
-          $(sections).each(function () {
-            // checking is scroll bar are in section
-            if ($(this).offset().top <= windowScroll + 500) {
-              // grabing the dynamic id of section
-              var Sectionid = $(sections).attr("id");
-              // removing current class from others
-              menuWrapper.find("li").removeClass("current");
-              // adding current class to related navigation
-              menuWrapper
-                .find("a[href*=\\#" + Sectionid + "]")
-                .parent()
-                .addClass("current");
-              menuWrapper.attr("data-section-class", "");
-              menuWrapper.attr("data-section-class", Sectionid);
-            }
-          });
-        });
-    } else {
-      $(".one-page-scroll-menu li.current").removeClass("current");
-      $(".one-page-scroll-menu li:first").addClass("current");
-    }
-  }
+  // function OnePageMenuScrollTwo() {
+  //   var windowScroll = $(window).scrollTop();
+  //   var menuWrapper = $(".one-page-scroll-menu");
+  //   if (windowScroll >= 100) {
+  //     menuWrapper
+  //       .find(".scrollToLink")
+  //       .find("a")
+  //       .each(function () {
+  //         // grabing section id dynamically
+  //         var sections = $(this).attr("href");
+  //         $(sections).each(function () {
+  //           // checking is scroll bar are in section
+  //           if ($(this).offset().top <= windowScroll + 500) {
+  //             // grabing the dynamic id of section
+  //             var Sectionid = $(sections).attr("id");
+  //             // removing current class from others
+  //             menuWrapper.find("li").removeClass("current");
+  //             // adding current class to related navigation
+  //             menuWrapper
+  //               .find("a[href*=\\#" + Sectionid + "]")
+  //               .parent()
+  //               .addClass("current");
+  //             menuWrapper.attr("data-section-class", "");
+  //             menuWrapper.attr("data-section-class", Sectionid);
+  //           }
+  //         });
+  //       });
+  //   } else {
+  //     $(".one-page-scroll-menu li.current").removeClass("current");
+  //     $(".one-page-scroll-menu li:first").addClass("current");
+  //   }
+  // }
 
   
   // dynamically add current menu class to menu
@@ -365,15 +365,15 @@
     wow.init();
   }
 
-
+// original menu scroll down
   function SmoothMenuScroll() {
     var anchor = $(".scrollToLink");
     if (anchor.length) {
       anchor.children("a").bind("click", function (event) {
         if ($(window).scrollTop() > 10) {
-          var headerH = "0";
+          var headerH = "117";
         } else {
-          var headerH = "0";
+          var headerH = "117";
         }
         var target = $(this);
         $("html, body")
@@ -427,8 +427,8 @@
 
   $(window).on("scroll", function () {
     headerStyle();
-    OnePageMenuScroll();
-    OnePageMenuScrollTwo();
+    // OnePageMenuScroll();
+    // OnePageMenuScrollTwo();
     if ($(".scroll-to-top").length) {
       var strickyScrollPos = 100;
       if ($(window).scrollTop() > strickyScrollPos) {
