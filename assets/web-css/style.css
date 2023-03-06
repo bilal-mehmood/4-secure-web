@@ -1221,8 +1221,7 @@ img {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
 }
-.banner-one-page .banner-carousel .content-box h1 span
- {
+.banner-one-page .banner-carousel .content-box h1 span {
   color: #fff;
   border-right: 5px solid #306bb6;
   display: block;
@@ -1238,22 +1237,7 @@ img {
   animation-fill-mode: forwards;
   width: 586px;
 }
-/* .banner-one-page .banner-carousel .content-box h1 span.slide-2-tech{
-  color: #fff;
-  border-right: 5px solid #306bb6;
-  display: block;
-  margin: auto;
-  font-weight: 300;
-   white-space: nowrap;
-  overflow: hidden;
- -webkit-animation: type3 6s steps(40, end) infinite, blink .5s step-end infinite alternate;
-  animation: type3 6s steps(40, end) infinite, blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 1.7s;
-  animation-delay: 1.7s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  width: 586px;
-} */
+ 
 @keyframes type3 {
   0% {
     width: 0;
@@ -1265,7 +1249,6 @@ img {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes type3 {
   0% {
     width: 0;
@@ -2905,6 +2888,10 @@ img {
   .banner-one-page .banner-carousel .content-box {
       height: 640px;
   }
+  .banner-one-page .banner-carousel .content-box h1 span{
+    width: 380px;
+  }
+
   .service-details .text-content p {
       margin-bottom: 20px;
   }
