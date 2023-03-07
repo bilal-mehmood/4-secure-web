@@ -795,16 +795,22 @@ img {
   color: var(--thm-base);
   margin: 40px 0px 0px;
 /*   display: none; */
+background-color: #316cb5;
+    padding: 1px 8px;
 }
 .mobile-nav-toggler .txt {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  padding-left: 10px;
-  font-size: 16px;
+  padding-right: 20px;
+  font-size: 22px;
   text-transform: capitalize;
   font-weight: 500;
-  display: none;
+  color: #fff;
+/*   display: none; */
+}
+.mobile-nav-toggler .icon.flaticon-menu-2:before{
+  color: #fff;
 }
 /* Default Form Style */
 .default-form {
@@ -2997,6 +3003,13 @@ img {
   .sidebar-page-container {
       padding: 90px 0px 60px;
   }
+  .mobile-nav-toggler .txt{
+    font-size: 17px;
+  }
+  .mobile-nav-toggler .icon.flaticon-menu-2:before {
+    color: #fff;
+    font-size: 26px;
+}
 }
 @media (max-width: 1280px) {
   .banner-one-page .banner-carousel .content-box {
