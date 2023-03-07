@@ -1,6 +1,40 @@
 (function ($) {
   "use strict";
 
+// Removing #id from url (custom code for service)
+// when the DOM is ready
+$(document).ready(function() {
+  // get the anchor link buttons
+  const menuBtn = $('.scrollingToLink');
+  // when each button is clicked
+  menuBtn.click(()=>{   
+    // set a short timeout before taking action
+    // so as to allow hash to be set
+    setTimeout(()=>{
+      // call removeHash function after set timeout
+      removeHash();
+    }, 5); // 5 millisecond timeout in this case
+  });
+
+  // removeHash function
+  // uses HTML5 history API to manipulate the location bar
+  function removeHash(){
+    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+  }
+});
+
+
+/**
+* another way to skin the same cat 
+*
+* $('.links').click(function(e){ 
+*    $('html, body').animate({
+*   scrollTop: $( $.attr(this, 'href') ).offset().top - $('.nav').height()
+*    }, 1000);
+*  return false;
+* });
+*/
+
   // update 18-05-2022
   // function SmoothMenuScroll2() {
   //   var anchor = $(".scrollToLink");
@@ -91,28 +125,28 @@
     dynamicCurrentMenuClass(mainNavUL);
   }
 
-  if ($(".checkout__payment__title").length) {
-    $(".checkout__payment__item").find(".checkout__payment__content").hide();
-    $(".checkout__payment__item--active")
-      .find(".checkout__payment__content")
-      .show();
+  // if ($(".checkout__payment__title").length) {
+  //   $(".checkout__payment__item").find(".checkout__payment__content").hide();
+  //   $(".checkout__payment__item--active")
+  //     .find(".checkout__payment__content")
+  //     .show();
 
-    $(".checkout__payment__title").on("click", function (e) {
-      e.preventDefault();
+  //   $(".checkout__payment__title").on("click", function (e) {
+  //     e.preventDefault();
 
-      $(this)
-        .parents(".checkout__payment")
-        .find(".checkout__payment__item")
-        .removeClass("checkout__payment__item--active");
-      $(this)
-        .parents(".checkout__payment")
-        .find(".checkout__payment__content")
-        .slideUp();
+  //     $(this)
+  //       .parents(".checkout__payment")
+  //       .find(".checkout__payment__item")
+  //       .removeClass("checkout__payment__item--active");
+  //     $(this)
+  //       .parents(".checkout__payment")
+  //       .find(".checkout__payment__content")
+  //       .slideUp();
 
-      $(this).parent().addClass("checkout__payment__item--active");
-      $(this).parent().find(".checkout__payment__content").slideDown();
-    });
-  }
+  //     $(this).parent().addClass("checkout__payment__item--active");
+  //     $(this).parent().find(".checkout__payment__content").slideDown();
+  //   });
+  // }
 
  
   //Hide Loading Box (Preloader)
@@ -269,34 +303,34 @@
 
 
   //Single Item Carousel
-  if ($(".single-item-carousel").length) {
-    $(".single-item-carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: true,
-      smartSpeed: 500,
-      autoplay: 5000,
-      autoplayTimeout: 5000,
-      navText: [
-        '<span class="icon fa fa-angle-left"></span>',
-        '<span class="icon fa fa-angle-right"></span>'
-      ],
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        800: {
-          items: 1
-        },
-        1024: {
-          items: 1
-        }
-      }
-    });
-  }
+  // if ($(".single-item-carousel").length) {
+  //   $(".single-item-carousel").owlCarousel({
+  //     loop: true,
+  //     margin: 30,
+  //     nav: true,
+  //     smartSpeed: 500,
+  //     autoplay: 5000,
+  //     autoplayTimeout: 5000,
+  //     navText: [
+  //       '<span class="icon fa fa-angle-left"></span>',
+  //       '<span class="icon fa fa-angle-right"></span>'
+  //     ],
+  //     responsive: {
+  //       0: {
+  //         items: 1
+  //       },
+  //       600: {
+  //         items: 1
+  //       },
+  //       800: {
+  //         items: 1
+  //       },
+  //       1024: {
+  //         items: 1
+  //       }
+  //     }
+  //   });
+  // }
 
 
   //Custom Seclect Box
@@ -393,33 +427,33 @@
   }
   SmoothMenuScroll();
 
-  function OnePageMenuScroll() {
-    var windscroll = $(window).scrollTop();
-    if (windscroll >= 117) {
-      var menuAnchor = $(".one-page-scroll-menu .scrollToLink").children("a");
-      menuAnchor.each(function () {
-        // grabing section id dynamically
-        var sections = $(this).attr("href");
-        $(sections).each(function () {
-          // checking is scroll bar are in section
-          if ($(this).offset().top <= windscroll + 100) {
-            // grabing the dynamic id of section
-            var Sectionid = $(sections).attr("id");
-            // removing current class from others
-            $(".one-page-scroll-menu").find("li").removeClass("current");
-            // adding current class to related navigation
-            $(".one-page-scroll-menu")
-              .find("a[href*=\\#" + Sectionid + "]")
-              .parent()
-              .addClass("current");
-          }
-        });
-      });
-    } else {
-      $(".one-page-scroll-menu li.current").removeClass("current");
-      $(".one-page-scroll-menu li:first").addClass("current");
-    }
-  }
+  // function OnePageMenuScroll() {
+  //   var windscroll = $(window).scrollTop();
+  //   if (windscroll >= 117) {
+  //     var menuAnchor = $(".one-page-scroll-menu .scrollToLink").children("a");
+  //     menuAnchor.each(function () {
+  //       // grabing section id dynamically
+  //       var sections = $(this).attr("href");
+  //       $(sections).each(function () {
+  //         // checking is scroll bar are in section
+  //         if ($(this).offset().top <= windscroll + 100) {
+  //           // grabing the dynamic id of section
+  //           var Sectionid = $(sections).attr("id");
+  //           // removing current class from others
+  //           $(".one-page-scroll-menu").find("li").removeClass("current");
+  //           // adding current class to related navigation
+  //           $(".one-page-scroll-menu")
+  //             .find("a[href*=\\#" + Sectionid + "]")
+  //             .parent()
+  //             .addClass("current");
+  //         }
+  //       });
+  //     });
+  //   } else {
+  //     $(".one-page-scroll-menu li.current").removeClass("current");
+  //     $(".one-page-scroll-menu li:first").addClass("current");
+  //   }
+  // }
 
   /* ==========================================================================
 	   When document is Scrollig, do
