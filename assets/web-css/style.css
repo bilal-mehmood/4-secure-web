@@ -3057,6 +3057,11 @@ animation: zoom-in-zoom-out 3s ease-out infinite;
   .banner-carousel .slide-item .image-layer{
     background-position: 100% 50%;
   }
+  .banner-carousel .content-box{
+    display: flex !important;
+        align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 375px) {
   .banner-one-page .banner-carousel .content-box h1 {
