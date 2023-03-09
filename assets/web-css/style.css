@@ -3053,3 +3053,22 @@ animation: zoom-in-zoom-out 3s ease-out infinite;
     font-size: 67px;
   }
 }
+@media (max-width: 500px) {
+  .banner-carousel .slide-item .image-layer{
+    background-position: 100% 50%;
+  }
+}
+@media (max-width: 375px) {
+  .banner-one-page .banner-carousel .content-box h1 {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .banner-one-page .banner-carousel .content-box h2 {
+    font-size: 55px;
+  }
+  .banner-carousel .content-box{
+    display: flex;
+        align-items: center;
+    justify-content: center;
+  }
+}

@@ -300,7 +300,6 @@ $('a').click(function(){
       margin: 0,
       nav: true,
       smartSpeed: 500,
-      // autoplay:false,
       autoplay: 6000,
       autoplayTimeout: 8000,
       navText: [
