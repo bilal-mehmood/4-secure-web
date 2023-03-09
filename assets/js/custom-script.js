@@ -1,9 +1,32 @@
 (function ($) {
   "use strict";
 
-// Removing #id from url (custom code for service)
 // when the DOM is ready
 $(document).ready(function() {
+  
+//Rmove #id from redirecting from new link 
+setTimeout( function(){
+
+  if (window.location.hash) {
+    
+      setTimeout(()=>{
+            // call removeHash function after set timeout
+            removeHash();
+      }, 5);
+    
+    }
+  }, 2000);
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $('.scrollingToLink').attr('href') ).offset().top - 117 + 'px'
+    }, 500);
+  alert('hello');
+
+    return false;
+});
+
+// Removing #id from url (custom code for service)
+
   // get the anchor link buttons
   const menuBtn = $('.scrollingToLink');
   // when each button is clicked
@@ -277,8 +300,9 @@ $(document).ready(function() {
       margin: 0,
       nav: true,
       smartSpeed: 500,
+      // autoplay:false,
       autoplay: 6000,
-      autoplayTimeout: 7000,
+      autoplayTimeout: 8000,
       navText: [
         '<span class="icon fa fa-angle-left"></span>',
         '<span class="icon fa fa-angle-right"></span>'
@@ -497,4 +521,6 @@ $(document).ready(function() {
 
 
   });
+
+
 })(window.jQuery);

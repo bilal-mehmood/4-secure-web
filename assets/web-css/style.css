@@ -1075,7 +1075,7 @@ background-color: #316cb5;
 }
 .banner-carousel .content-box h1 {
   display: block;
-  font-size: 140px;
+  font-size: 100px;
   line-height: 0.85em;
   color: #ffffff;
   font-weight: 600;
@@ -1085,6 +1085,39 @@ background-color: #316cb5;
   margin: 0;
   -webkit-transform: translateY(80px);
   transform: translateY(80px);
+}
+.banner-carousel .content-box h2 {
+  display: block;
+  font-size: 140px;
+  line-height: 0.85em;
+/*   color: #ffffff; */
+  font-weight: 300;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin: 20px 0 0;
+  -webkit-transform: translateY(80px);
+  transform: translateY(80px);
+animation: zoom-in-zoom-out 3s ease-out infinite;
+    color: #306cb5;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #ffffff;
+}
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.banner-carousel .content-box h2 span{
+      color: #306cb5;
+/*     -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff; */
 }
 .banner-two .banner-carousel .content-box h1 {
   text-transform: capitalize;
@@ -1102,6 +1135,15 @@ background-color: #316cb5;
   transition: all 1000ms ease;
   -webkit-transition-delay: 1300ms;
   transition-delay: 1300ms;
+}
+.banner-carousel .active .content-box h2 {
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+  -webkit-transition-delay: 1900ms;
+  transition-delay: 1900ms;
 }
 .banner-three .banner-carousel .active .content-box h1 {
   -webkit-transition-delay: 700ms;
@@ -1232,54 +1274,12 @@ background-color: #316cb5;
 }
 .banner-one-page .banner-carousel .content-box h1 span {
   color: #fff;
-  border-right: 5px solid #306bb6;
   display: block;
   margin: auto;
   font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
- -webkit-animation: type3 6s steps(40, end) infinite, blink .5s step-end infinite alternate;
-  animation: type3 6s steps(40, end) infinite, blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 1.6s;
-  animation-delay: 1.6s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  width: 586px;
-}
- 
-@keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
+
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    border-color: tranparent;
-  }
-}
 @media (min-width: 600px) {
   .banner-one-page .banner-carousel .content-box h1 {
     font-size: 60px;
@@ -1297,7 +1297,7 @@ background-color: #316cb5;
 }
 @media (min-width: 1200px) {
   .banner-one-page .banner-carousel .content-box h1 {
-    font-size: 150px;
+    font-size: 120px;
   }
 }
 .banner-one-page .banner-carousel .content-box .link-box {
@@ -1740,7 +1740,7 @@ background-color: #316cb5;
 .service-block-two .inner-box {
   position: relative;
   display: block;
-  padding: 50px 45px 40px;
+  padding: 50px 30px 40px;
   background: #ffffff;
   border-radius: 7px;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
@@ -1810,7 +1810,7 @@ background-color: #316cb5;
   color: #fff !important;
 }
 .service-block-two .inner-box h5 {
-  font-size: 30px;
+  font-size: 29px;
   text-transform: uppercase;
   color: var(--thm-black);
   font-weight: 400;
@@ -2982,6 +2982,9 @@ background-color: #316cb5;
       height: 600px;
   }
   .banner-one-page .banner-carousel .content-box h1 {
+      font-size: 85px;
+  }
+  .banner-one-page .banner-carousel .content-box h2 {
       font-size: 95px;
   }
   .sec-title h2{
