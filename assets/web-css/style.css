@@ -984,6 +984,55 @@ background-color: #316cb5;
   background-size: cover;
   z-index: 1;
 }
+.banner-section .left-based-text {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  bottom: 50px;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  z-index: 10;
+  font-family: var(--thm-font);
+}
+.banner-section .left-based-text .base-inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* width: 730px;
+  height: 24px; */
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+/*   -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg); */
+}
+.banner-four__social {
+  position: fixed;
+  top: 56%;
+  left: 30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.banner-four__social a {
+  font-size: 20px;
+  color: var(--thm-base);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.banner-four__social a+a {
+  margin-top: 30px;
+}
+
+.banner-four__social a:hover {
+  color: var(--thm-base);
+}
+
 .banner-carousel {
   position: relative;
   z-index: 1;
@@ -1296,6 +1345,16 @@ background-color: #316cb5;
 @media (min-width: 1200px) {
   .banner-one-page .banner-carousel .content-box h1 {
     font-size: 120px;
+  }
+  .banner-four__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: 29px;
   }
 }
 .banner-one-page .banner-carousel .content-box .link-box {
@@ -2785,7 +2844,7 @@ background-color: #316cb5;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 .side-menu__social a {
@@ -2842,8 +2901,8 @@ background-color: #316cb5;
   margin-right: auto;
   height: 1px;
   background-color: #fff;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .side-menu__text p {
   font-size: 20px;

@@ -16,24 +16,21 @@ setTimeout( function(){
     
     }
   }, 2000);
-$('a').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $('.scrollingToLink').attr('href') ).offset().top - 117 + 'px'
-    }, 500);
-  alert('hello');
 
-    return false;
-});
 
 // Removing #id from url (custom code for service)
 
   // get the anchor link buttons
   const menuBtn = $('.scrollingToLink');
+  // scrollTop: $( $('.scrollingToLink').attr('href') ).offset().top - 117 + 'px'
   // when each button is clicked
   menuBtn.click(()=>{   
     // set a short timeout before taking action
     // so as to allow hash to be set
     setTimeout(()=>{
+              // this line is for testing
+              // scrollTop: $($(this).attr("href")).offset()
+            
       // call removeHash function after set timeout
       removeHash();
     }, 5); // 5 millisecond timeout in this case
