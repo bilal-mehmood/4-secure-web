@@ -10,11 +10,11 @@
 }
 @media only screen and (max-width: 1199px) {
   .main-header.fixed-header .header-upper .logo-box {
-    padding-top: 20px;
-    padding-bottom: 20px;
+/*     padding-top: 20px;
+    padding-bottom: 20px; */
   }
   .main-header.fixed-header .nav-outer .mobile-nav-toggler {
-    margin-top: 20px;
+/*     margin-top: 20px; */
   }
   .header-style-two.fixed-header .nav-outer .mobile-nav-toggler {
     color: #fff;

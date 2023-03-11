@@ -4,16 +4,16 @@
 // when the DOM is ready
 $(document).ready(function() {
   
-//Rmove #id from redirecting from new link 
-setTimeout( function(){
+  //Rmove #id from redirecting from new link 
+  setTimeout( function(){
 
-  if (window.location.hash) {
-    
-      setTimeout(()=>{
-            // call removeHash function after set timeout
-            removeHash();
-      }, 5);
-    
+    if (window.location.hash) {
+      
+        setTimeout(()=>{
+              // call removeHash function after set timeout
+              removeHash();
+        }, 5);
+      
     }
   }, 2000);
 
@@ -28,8 +28,6 @@ setTimeout( function(){
     // set a short timeout before taking action
     // so as to allow hash to be set
     setTimeout(()=>{
-              // this line is for testing
-              // scrollTop: $($(this).attr("href")).offset()
             
       // call removeHash function after set timeout
       removeHash();

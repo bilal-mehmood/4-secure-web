@@ -1000,7 +1000,7 @@ background-color: #316cb5;
 }
 .banner-section .left-based-text .base-inner {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   /* width: 730px;
   height: 24px; */
@@ -1012,21 +1012,32 @@ background-color: #316cb5;
 .banner-four__social {
   position: fixed;
   top: 56%;
-  left: 30px;
+  right: 30px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   display: flex;
+  -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
-
 .banner-four__social a {
   font-size: 20px;
   color: var(--thm-base);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+  border: 2px solid var(--thm-base) ;
+  width: 47px !important;
+    height: 47px !important;
 }
-
+.banner-four__social a i{
+  color: #000;
+}
+.banner-four__social a:hover i{
+  color: #fff;
+} 
 .banner-four__social a+a {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .banner-four__social a:hover {
@@ -1354,7 +1365,7 @@ background-color: #316cb5;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    left: 29px;
+    right: 29px;
   }
 }
 .banner-one-page .banner-carousel .content-box .link-box {
@@ -1479,6 +1490,46 @@ background-color: #316cb5;
   height: 100%;
   background: #f4f5f8;
 }
+.about-section .text-column .since {
+  position: relative;
+  float: left;
+  margin-left: 41px;
+  margin-top: 10px;
+}
+.about-section .text-column .since:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  width: 80px;
+  height: 80px;
+  background: #e8e9e9;
+  border-radius: 50%;
+}
+.about-section .text-column .since:after {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0px;
+  bottom: 0px;
+  border-left: 2px solid var(--thm-base);
+}
+.about-section .text-column .since .txt {
+  position: relative;
+  display: block;
+  padding: 21px 5px;
+  width: 90px;
+  height: 90px;
+  line-height: 24px;
+  text-align: center;
+  background: var(--thm-black);
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 50%;
+  font-family: var(--thm-font);
+  font-size: 20px;
+  padding-top: 24px;
+}
 .about-section .image-column {
   position: relative;
   margin-bottom: 30px;
@@ -1538,6 +1589,7 @@ background-color: #316cb5;
   font-family: var(--thm-font);
   color: var(--thm-base);
   line-height: 34px;
+  clear: both;
 }
 .about-section .text-column .text {
   position: relative;
@@ -1745,7 +1797,7 @@ background-color: #316cb5;
   margin-bottom: 5px;
 }
 .main-footer .info-widget ul li.address {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .main-footer .info-widget ul li .icon {
   position: absolute;
@@ -2846,6 +2898,7 @@ background-color: #316cb5;
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
+
 }
 .side-menu__social a {
   display: -webkit-box;
@@ -2868,10 +2921,10 @@ background-color: #316cb5;
   transition: all 500ms ease;
 }
 .side-menu__social a+a {
-  margin-left: 10px;
+/*   margin-left: 10px; */
 }
 .side-menu__social a:hover {
-  background-color: #ffaa16;
+  background-color: var(--thm-base);
   color: var(--thm-black);
 }
 .side-menu__content {
@@ -3103,6 +3156,11 @@ background-color: #316cb5;
       padding: 14px 39px 12px;
   }
 }
+@media (max-width: 1024px) {
+  .banner-four__social{
+    top: 48%;
+  }
+}
 @media (max-width: 992px) {
   .banner-one-page .banner-carousel .content-box h1 {
     font-size: 65px;
@@ -3110,6 +3168,9 @@ background-color: #316cb5;
   .banner-one-page .banner-carousel .content-box h2 {
     font-size: 35px;
     padding: 30px 0 0;
+  }
+  .banner-four__social {
+      top: 27%;
   }
 }
 @media (max-width: 767px) {
@@ -3131,8 +3192,25 @@ background-color: #316cb5;
   }
   .banner-carousel .content-box{
     display: flex !important;
-        align-items: center;
+    align-items: center;
     justify-content: center;
+  }
+  .banner-four__social a{
+    width: 37px !important;
+    height: 37px !important;
+  }
+  .banner-four__social {
+    top: 39%;
+    right: 20px;
+  }
+  .page-banner .image-layer.web-bg{
+    background-position: 84% 50%;
+  }
+  .page-banner .bread-crumb li{
+    font-size: 16px;
+  }
+  .about-section .image-column .image-block:nth-child(1){
+    margin-left: 0;
   }
 }
 @media (max-width: 375px) {
