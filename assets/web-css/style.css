@@ -1781,6 +1781,11 @@ background-color: #316cb5;
   border-radius: 50%;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #fff;
 }
 .main-footer .social-links li a span {
   vertical-align: middle;
@@ -2202,6 +2207,9 @@ background-color: #316cb5;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.page-banner .image-layer.training-page{
+    background-position: 50% -430% ;
+  }
 .page-banner .image-layer {
   position: absolute;
   left: 0;
@@ -2307,7 +2315,7 @@ background-color: #316cb5;
 }
 .page-banner .bread-crumb li a:hover,
 .page-banner .bread-crumb li.active {
-  color: var(--thm-base);
+  color: #fff;
 }
 /* Contact Section */
 .contact-section {
@@ -2919,6 +2927,7 @@ background-color: #316cb5;
   border-radius: 50%;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+  margin-right: 10px;
 }
 .side-menu__social a+a {
 /*   margin-left: 10px; */
@@ -3049,7 +3058,7 @@ background-color: #316cb5;
   }
   .sidebar .call-up .phone{
       font-size: 25px;
-      margin-top: 16px;
+      margin-top: 0;
   }
   .service-details .text-content ul li{
     line-height: 24px;
