@@ -1,6 +1,7 @@
 (function ($) {
   "use strict";
 
+// Removing #id from url (custom code for service)
 // when the DOM is ready
 $(document).ready(function() {
   
@@ -15,106 +16,15 @@ $(document).ready(function() {
         }, 5);
       
     }
-  }, 2000);
+  }, 1000);
 
-
-// Removing #id from url (custom code for service)
-
-  // get the anchor link buttons
-  const menuBtn = $('.scrollingToLink');
-  // scrollTop: $( $('.scrollingToLink').attr('href') ).offset().top - 117 + 'px'
-  // when each button is clicked
-  menuBtn.click(()=>{   
-    // set a short timeout before taking action
-    // so as to allow hash to be set
-    setTimeout(()=>{
-            
-      // call removeHash function after set timeout
-      removeHash();
-    }, 5); // 5 millisecond timeout in this case
-  });
-
-  // removeHash function
+ // removeHash function
   // uses HTML5 history API to manipulate the location bar
   function removeHash(){
     history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
   }
 });
 
-
-/**
-* another way to skin the same cat 
-*
-* $('.links').click(function(e){ 
-*    $('html, body').animate({
-*   scrollTop: $( $.attr(this, 'href') ).offset().top - $('.nav').height()
-*    }, 1000);
-*  return false;
-* });
-*/
-
-  // update 18-05-2022
-  // function SmoothMenuScroll2() {
-  //   var anchor = $(".scrollToLink");
-  //   if (anchor.length) {
-  //     anchor.children("a").bind("click", function (event) {
-  //       if ($(window).scrollTop() > 10) {
-  //         var headerH = "70";
-  //       } else {
-  //         var headerH = "70";
-  //       }
-  //       var target = $(this);
-  //       $("html, body")
-  //         .stop()
-  //         .animate(
-  //           {
-  //             scrollTop: $(target.attr("href")).offset().top - headerH + "px"
-  //           },
-  //           1200,
-  //           "easeInOutExpo"
-  //         );
-  //       anchor.removeClass("current");
-  //       target.parent().addClass("current");
-  //       event.preventDefault();
-  //     });
-  //   }
-  // }
-  // SmoothMenuScroll2();
-
-  // function OnePageMenuScrollTwo() {
-  //   var windowScroll = $(window).scrollTop();
-  //   var menuWrapper = $(".one-page-scroll-menu");
-  //   if (windowScroll >= 100) {
-  //     menuWrapper
-  //       .find(".scrollToLink")
-  //       .find("a")
-  //       .each(function () {
-  //         // grabing section id dynamically
-  //         var sections = $(this).attr("href");
-  //         $(sections).each(function () {
-  //           // checking is scroll bar are in section
-  //           if ($(this).offset().top <= windowScroll + 500) {
-  //             // grabing the dynamic id of section
-  //             var Sectionid = $(sections).attr("id");
-  //             // removing current class from others
-  //             menuWrapper.find("li").removeClass("current");
-  //             // adding current class to related navigation
-  //             menuWrapper
-  //               .find("a[href*=\\#" + Sectionid + "]")
-  //               .parent()
-  //               .addClass("current");
-  //             menuWrapper.attr("data-section-class", "");
-  //             menuWrapper.attr("data-section-class", Sectionid);
-  //           }
-  //         });
-  //       });
-  //   } else {
-  //     $(".one-page-scroll-menu li.current").removeClass("current");
-  //     $(".one-page-scroll-menu li:first").addClass("current");
-  //   }
-  // }
-
-  
   // dynamically add current menu class to menu
   function dynamicCurrentMenuClass(selector) {
     let FileName = window.location.href.split("/").reverse()[0];
@@ -142,30 +52,6 @@ $(document).ready(function() {
     let mainNavUL = $(".main-menu .navigation");
     dynamicCurrentMenuClass(mainNavUL);
   }
-
-  // if ($(".checkout__payment__title").length) {
-  //   $(".checkout__payment__item").find(".checkout__payment__content").hide();
-  //   $(".checkout__payment__item--active")
-  //     .find(".checkout__payment__content")
-  //     .show();
-
-  //   $(".checkout__payment__title").on("click", function (e) {
-  //     e.preventDefault();
-
-  //     $(this)
-  //       .parents(".checkout__payment")
-  //       .find(".checkout__payment__item")
-  //       .removeClass("checkout__payment__item--active");
-  //     $(this)
-  //       .parents(".checkout__payment")
-  //       .find(".checkout__payment__content")
-  //       .slideUp();
-
-  //     $(this).parent().addClass("checkout__payment__item--active");
-  //     $(this).parent().find(".checkout__payment__content").slideDown();
-  //   });
-  // }
-
  
   //Hide Loading Box (Preloader)
   function handlePreloader() {
@@ -206,14 +92,6 @@ $(document).ready(function() {
     var mobileNavContainer = $(".mobile-nav__container");
     mobileNavContainer.append(mobileMenuContent);
 
-    //Dropdown Button
-    mobileNavContainer
-      .find("li.dropdown .dropdown-btn")
-      .on("click", function (e) {
-        e.preventDefault();
-        $(this).toggleClass("open");
-        $(this).parent("a").parent("li").children("ul").slideToggle(500);
-      });
     //Menu Toggle Btn
     $(".mobile-nav-toggler").on("click", function () {
       $(".side-menu__block").addClass("active");
@@ -227,7 +105,6 @@ $(document).ready(function() {
       }
     );
   }
-
  
   //Custom Cursor
   if ($(".custom-cursor__overlay").length) {
@@ -317,39 +194,6 @@ $(document).ready(function() {
       }
     });
   }
-
-
-
-  //Single Item Carousel
-  // if ($(".single-item-carousel").length) {
-  //   $(".single-item-carousel").owlCarousel({
-  //     loop: true,
-  //     margin: 30,
-  //     nav: true,
-  //     smartSpeed: 500,
-  //     autoplay: 5000,
-  //     autoplayTimeout: 5000,
-  //     navText: [
-  //       '<span class="icon fa fa-angle-left"></span>',
-  //       '<span class="icon fa fa-angle-right"></span>'
-  //     ],
-  //     responsive: {
-  //       0: {
-  //         items: 1
-  //       },
-  //       600: {
-  //         items: 1
-  //       },
-  //       800: {
-  //         items: 1
-  //       },
-  //       1024: {
-  //         items: 1
-  //       }
-  //     }
-  //   });
-  // }
-
 
   //Custom Seclect Box
   if ($(".custom-select-box").length) {
@@ -444,34 +288,6 @@ $(document).ready(function() {
     }
   }
   SmoothMenuScroll();
-
-  // function OnePageMenuScroll() {
-  //   var windscroll = $(window).scrollTop();
-  //   if (windscroll >= 117) {
-  //     var menuAnchor = $(".one-page-scroll-menu .scrollToLink").children("a");
-  //     menuAnchor.each(function () {
-  //       // grabing section id dynamically
-  //       var sections = $(this).attr("href");
-  //       $(sections).each(function () {
-  //         // checking is scroll bar are in section
-  //         if ($(this).offset().top <= windscroll + 100) {
-  //           // grabing the dynamic id of section
-  //           var Sectionid = $(sections).attr("id");
-  //           // removing current class from others
-  //           $(".one-page-scroll-menu").find("li").removeClass("current");
-  //           // adding current class to related navigation
-  //           $(".one-page-scroll-menu")
-  //             .find("a[href*=\\#" + Sectionid + "]")
-  //             .parent()
-  //             .addClass("current");
-  //         }
-  //       });
-  //     });
-  //   } else {
-  //     $(".one-page-scroll-menu li.current").removeClass("current");
-  //     $(".one-page-scroll-menu li:first").addClass("current");
-  //   }
-  // }
 
   /* ==========================================================================
 	   When document is Scrollig, do

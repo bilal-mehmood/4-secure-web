@@ -3030,6 +3030,9 @@ background-color: #316cb5;
 }
 
 @media (max-width: 1440px) {
+  .page-banner .image-layer.training-page {
+      background-position: 50% -277%;
+  }
   .banner-one-page .banner-carousel .content-box {
       height: 640px;
   }
@@ -3181,8 +3184,14 @@ background-color: #316cb5;
   .banner-four__social {
       top: 27%;
   }
+  .preloader .icon{
+    background-size: 20% !important;
+  }
 }
 @media (max-width: 767px) {
+  .preloader .icon{
+    background-size: 28% !important;
+  }
   .banner-one-page .banner-carousel .content-box h1 {
     font-size: 60px;
     line-height: 54px;
@@ -3193,6 +3202,10 @@ background-color: #316cb5;
   }
   .banner-one-page .banner-carousel .content-box h2 span{
     font-size: 19px;
+  }
+  .page-banner h1 {
+      font-size: 46px !important;
+      line-height: 1.05em;
   }
 }
 @media (max-width: 500px) {
