@@ -170,14 +170,11 @@ $(document).ready(function() {
       animateOut: "fadeOut",
       animateIn: "fadeIn",
       margin: 0,
-      nav: true,
+      nav: false,
       smartSpeed: 500,
       autoplay: 6000,
       autoplayTimeout: 8000,
-      navText: [
-        '<span class="icon fa fa-angle-left"></span>',
-        '<span class="icon fa fa-angle-right"></span>'
-      ],
+      
       responsive: {
         0: {
           items: 1
